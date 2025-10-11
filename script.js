@@ -1,9 +1,12 @@
-// Cambiar secciones
-function mostrar(id) {
-  document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+// Scroll suave a secciones y resaltar pestaña
+function scrollToSection(id) {
+  const section = document.getElementById(id);
+  section.scrollIntoView({behavior: "smooth"});
+  
   document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  event.target.classList.add('active');
+  const activeBtn = Array.from(document.querySelectorAll('nav button'))
+                    .find(b => b.textContent.includes(section.querySelector('h2').textContent.trim().split(" ")[1]));
+  if(activeBtn) activeBtn.classList.add('active');
 }
 
 // Modo oscuro
@@ -16,5 +19,3 @@ darkBtn.addEventListener('click', () => {
     darkBtn.textContent = "Modo Oscuro 🌙";
   }
 });
-
-
