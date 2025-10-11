@@ -1,1 +1,138 @@
+/* ===== Estilos generales ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+  background-color: #f4f6f5;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(90deg, #4CAF50, #8BC34A);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+header h1 { font-size: 2em; }
+
+#darkModeBtn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 8px 12px;
+  background-color: white;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#darkModeBtn:hover { background-color: #ddd; }
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #e0e0e0;
+  padding: 10px 0;
+}
+
+nav button {
+  background-color: #9E9E9E;
+  color: white;
+  border: none;
+  margin: 0 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav button:hover, nav button.active {
+  background-color: #4CAF50;
+  transform: scale(1.05);
+}
+
+main {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+section {
+  display: none;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+section.active { display: block; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Tarjetas interactivas ===== */
+.card {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 350px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn:hover { background-color: #388E3C; }
+
+footer {
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* ===== Modo oscuro ===== */
+body.dark-mode { background-color: #1e1e1e; color: #e0e0e0; }
+body.dark-mode nav { background-color: #333; }
+body.dark-mode nav button { background-color: #555; }
+body.dark-mode nav button.active, body.dark-mode nav button:hover { background-color: #4CAF50; }
+body.dark-mode header { background: linear-gradient(90deg, #2e7d32, #558b2f); }
+body.dark-mode #darkModeBtn { background-color: #333; color: white; }
+body.dark-mode #darkModeBtn:hover { background-color: #555; }
+body.dark-mode footer { background-color: #2e7d32; }
+
 
