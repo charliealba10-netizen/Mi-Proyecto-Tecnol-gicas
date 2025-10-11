@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Classroom - Proyecto Tecnológicas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Mi Classroom</h1>
+    <nav>
+      <button class="tab-button active" data-tab="tecnologicas">Tecnológicas</button>
+      <button class="tab-button" data-tab="quimica">Química</button>
+      <button class="tab-button" data-tab="matematicas">Matemáticas</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="tecnologicas" class="tab-content active">
+      <h2>Proyectos de Tecnológicas</h2>
+      <p>Aquí encontrarás los trabajos y evidencias del área de Tecnológicas.</p>
+
+      <div class="card">
+        <h3>Proyecto 1: Página Web Personal</h3>
+        <p>Diseña una página web sencilla que muestre tus intereses y habilidades.</p>
+        <a href="#" target="_blank" class="btn">Ver Evidencia</a>
+      </div>
+
+      <div class="card">
+        <h3>Proyecto 2: Circuitos Eléctricos</h3>
+        <p>Presenta el diseño y la simulación de un circuito básico.</p>
+        <a href="#" target="_blank" class="btn">Ver Evidencia</a>
+      </div>
+    </section>
+
+    <section id="quimica" class="tab-content">
+      <h2>Proyectos de Química</h2>
+      <p>Espacio para los trabajos de laboratorio, informes y experimentos.</p>
+
+      <div class="card">
+        <h3>Experimento 1: Reacciones Ácido-Base</h3>
+        <p>Informe sobre los resultados del experimento.</p>
+        <a href="#" target="_blank" class="btn">Ver Evidencia</a>
+      </div>
+    </section>
+
+    <section id="matematicas" class="tab-content">
+      <h2>Proyectos de Matemáticas</h2>
+      <p>Aquí se encuentran los proyectos de geometría, álgebra y cálculo.</p>
+
+      <div class="card">
+        <h3>Proyecto 1: Gráficas y Funciones</h3>
+        <p>Trabajo sobre la representación gráfica de funciones lineales y cuadráticas.</p>
+        <a href="#" target="_blank" class="btn">Ver Evidencia</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Proyecto de Tecnológicas | Desarrollado por [Tu Nombre]</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
