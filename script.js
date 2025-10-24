@@ -1,4 +1,4 @@
-// Animación de partículas flotantes
+// Fondo animado con partículas suaves
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 let particlesArray = [];
@@ -10,8 +10,8 @@ class Particle {
     this.x = Math.random() * canvas.width;
     this.y = Math.random() * canvas.height;
     this.size = Math.random() * 3 + 1;
-    this.speedX = Math.random() * 2 - 1;
-    this.speedY = Math.random() * 2 - 1;
+    this.speedX = Math.random() * 1.5 - 0.75;
+    this.speedY = Math.random() * 1.5 - 0.75;
   }
   update() {
     this.x += this.speedX;
@@ -20,7 +20,7 @@ class Particle {
     if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
   }
   draw() {
-    ctx.fillStyle = "rgba(0,255,150,0.6)";
+    ctx.fillStyle = "rgba(0,255,150,0.5)";
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
     ctx.fill();
@@ -29,7 +29,7 @@ class Particle {
 
 function init() {
   particlesArray = [];
-  for (let i = 0; i < 80; i++) {
+  for (let i = 0; i < 70; i++) {
     particlesArray.push(new Particle());
   }
 }
@@ -50,3 +50,4 @@ window.addEventListener("resize", () => {
   canvas.height = window.innerHeight;
   init();
 });
+
