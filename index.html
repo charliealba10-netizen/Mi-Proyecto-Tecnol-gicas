@@ -1,166 +1,111 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Trabajos Secundaria — Carlos Emmanuel Alba Escobedo</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabajos Secundaria - Carlos Emmanuel Alba Escobedo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Animated line/wave background -->
-  <div id="bg-lines" aria-hidden="true">
-    <svg class="bg-line l1" viewBox="0 0 1600 200" preserveAspectRatio="none">
-      <path d="M0,120 C300,40 900,200 1600,80 L1600,200 L0,200 Z"></path>
-    </svg>
-    <svg class="bg-line l2" viewBox="0 0 1600 200" preserveAspectRatio="none">
-      <path d="M0,60 C350,140 950,0 1600,60 L1600,200 L0,200 Z"></path>
-    </svg>
-    <svg class="bg-line l3" viewBox="0 0 1600 200" preserveAspectRatio="none">
-      <path d="M0,100 C250,0 850,180 1600,100 L1600,200 L0,200 Z"></path>
-    </svg>
-  </div>
 
-  <header class="site-header">
-    <div class="brand">
-      <h1>Trabajos Secundaria</h1>
-      <small>Carlos Emmanuel Alba Escobedo</small>
-    </div>
+  <!-- Botón de menú -->
+  <div class="menu-btn" id="menuBtn">&#9776;</div>
 
-    <nav class="nav-tabs" role="navigation" aria-label="Pestañas de materias">
-      <button class="tab-btn active" data-target="tec">Tecnologías</button>
-      <button class="tab-btn" data-target="quim">Química</button>
-      <button class="tab-btn" data-target="mate">Matemáticas</button>
-      <button class="tab-btn" data-target="hist">Historia</button>
-    </nav>
-  </header>
+  <!-- Panel lateral -->
+  <nav class="side-menu" id="sideMenu">
+    <h2>Materias</h2>
+    <ul>
+      <li data-target="tecno" class="active">Tecnologías</li>
+      <li data-target="quimica">Química</li>
+      <li data-target="mates">Matemáticas</li>
+      <li data-target="historia">Historia</li>
+    </ul>
+  </nav>
 
-  <main class="main">
-    <!-- Tecnologías (sin evidencia) -->
-    <section id="tec" class="tab-panel active" aria-labelledby="tec">
-      <h2>Tecnologías</h2>
-      <p class="lead">Sección destinada a proyectos de programación, robótica y desarrollo web. (Sin evidencia pública en esta versión.)</p>
+  <!-- Contenido principal -->
+  <main>
+    <!-- Fondo animado -->
+    <div class="bg-waves"></div>
 
-      <div class="mosaic">
-        <div class="m-tile">Diseño UI</div>
-        <div class="m-tile">Robótica</div>
-        <div class="m-tile">Programación</div>
-        <div class="m-tile">Redes</div>
-      </div>
+    <section id="tecno" class="content active">
+      <h1>Tecnologías</h1>
+      <p>Exploramos herramientas digitales y habilidades prácticas que nos ayudan a resolver problemas de la vida real mediante la innovación y la creatividad.</p>
     </section>
 
-    <!-- Química (sin evidencia) -->
-    <section id="quim" class="tab-panel" aria-labelledby="quim">
-      <h2>Química</h2>
-      <p class="lead">Sección para experimentos y conceptos de química. (Sin evidencia pública en esta versión.)</p>
-
-      <div class="mosaic">
-        <div class="m-tile">Reacciones</div>
-        <div class="m-tile">Indicadores</div>
-        <div class="m-tile">Materiales</div>
-        <div class="m-tile">Seguridad</div>
-      </div>
+    <section id="quimica" class="content">
+      <h1>Química</h1>
+      <p>Estudiamos la composición y transformación de la materia, comprendiendo cómo los elementos se combinan para formar todo lo que nos rodea.</p>
     </section>
 
-    <!-- Matemáticas (sin evidencia) -->
-    <section id="mate" class="tab-panel" aria-labelledby="mate">
-      <h2>Matemáticas</h2>
-      <p class="lead">Sección de problemas, gráficas y ejercicios. (Sin evidencia pública en esta versión.)</p>
-
-      <div class="mosaic">
-        <div class="m-tile">Álgebra</div>
-        <div class="m-tile">Geometría</div>
-        <div class="m-tile">Estadística</div>
-        <div class="m-tile">Funciones</div>
-      </div>
+    <section id="mates" class="content">
+      <h1>Matemáticas</h1>
+      <p>Aprendemos a analizar patrones, resolver problemas lógicos y aplicar el razonamiento numérico en diferentes contextos del mundo real.</p>
     </section>
 
-    <!-- Historia CON línea del tiempo (única evidencia) -->
-    <section id="hist" class="tab-panel" aria-labelledby="hist">
-      <h2>Historia</h2>
-      <p class="lead">Línea del tiempo: Prehistoria → Edad de los Metales → Civilizaciones fluviales. (Única evidencia pública)</p>
+    <section id="historia" class="content">
+      <h1>Historia</h1>
+      <p>Línea del tiempo desde la prehistoria hasta las civilizaciones fluviales.</p>
 
-      <div class="timeline-wrap">
-        <!-- visual central band -->
-        <div class="timeline-band" aria-hidden="true"></div>
-
-        <!-- flex timeline that is responsive and scrollable if required -->
-        <div class="timeline-row" role="list">
-          <!-- Item: Edad de Piedra -->
-          <article class="timeline-card" role="listitem" data-year="2,500,000 a.C – 3000 a.C">
-            <div class="dot" tabindex="0" aria-label="Edad de Piedra, 2,500,000 a.C – 3000 a.C"></div>
-            <div class="card-body">
-              <div class="year">2,500,000 a.C – 3000 a.C</div>
-              <h3>Edad de Piedra</h3>
-              <p>Herramientas de piedra y dominio del fuego — base tecnológica del ser humano.</p>
+      <div class="timeline-container">
+        <div class="timeline-items">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <p>2,500,000 a.C – 3000 a.C</p>
+              <strong>Edad de Piedra</strong>
+              <p>Uso de herramientas de piedra y control del fuego.</p>
             </div>
-          </article>
-
-          <!-- Edad de los Metales -->
-          <article class="timeline-card" role="listitem" data-year="3500 a.C – 1200 a.C">
-            <div class="dot" tabindex="0" aria-label="Edad de los Metales, 3500 a.C – 1200 a.C"></div>
-            <div class="card-body">
-              <div class="year">3500 a.C – 1200 a.C</div>
-              <h3>Edad de los Metales</h3>
-              <p>Aparición de la metalurgia (cobre, bronce, hierro): herramientas y cambio social.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <p>3500 a.C – 1200 a.C</p>
+              <strong>Edad de los Metales</strong>
+              <p>Metalurgia: cobre, bronce e hierro para utensilios y armas.</p>
             </div>
-          </article>
-
-          <!-- Mesopotamia -->
-          <article class="timeline-card" role="listitem" data-year="~3500 a.C">
-            <div class="dot" tabindex="0" aria-label="Mesopotamia, circa 3500 a.C"></div>
-            <div class="card-body">
-              <div class="year">~3500 a.C</div>
-              <h3>Mesopotamia</h3>
-              <p>Característica: creación de la escritura cuneiforme (registro administrativo y cultural).</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <p>3500 a.C</p>
+              <strong>Mesopotamia</strong>
+              <p>Invención de la escritura cuneiforme.</p>
             </div>
-          </article>
-
-          <!-- Egipto -->
-          <article class="timeline-card" role="listitem" data-year="~3100 a.C">
-            <div class="dot" tabindex="0" aria-label="Egipto, circa 3100 a.C"></div>
-            <div class="card-body">
-              <div class="year">~3100 a.C</div>
-              <h3>Egipto</h3>
-              <p>Característica: ingeniería hidráulica del Nilo y arquitectura monumental (pirámides).</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <p>3100 a.C</p>
+              <strong>Egipto</strong>
+              <p>Arquitectura monumental y planificación hidráulica.</p>
             </div>
-          </article>
-
-          <!-- Valle del Indo -->
-          <article class="timeline-card" role="listitem" data-year="~2500 a.C">
-            <div class="dot" tabindex="0" aria-label="Valle del Indo, circa 2500 a.C"></div>
-            <div class="card-body">
-              <div class="year">~2500 a.C</div>
-              <h3>Valle del Indo</h3>
-              <p>Característica: urbanismo planificado y sistemas avanzados de drenaje y saneamiento.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <p>2500 a.C</p>
+              <strong>Valle del Indo</strong>
+              <p>Urbanismo organizado y sistemas de drenaje.</p>
             </div>
-          </article>
-
-          <!-- China Huang He -->
-          <article class="timeline-card" role="listitem" data-year="~2200 a.C">
-            <div class="dot" tabindex="0" aria-label="China Huang He, circa 2200 a.C"></div>
-            <div class="card-body">
-              <div class="year">~2200 a.C</div>
-              <h3>China (Huang He)</h3>
-              <p>Característica: técnicas agrícolas y administración centralizada para grandes poblaciones.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <p>2200 a.C</p>
+              <strong>China (Huang He)</strong>
+              <p>Desarrollo agrícola y administración centralizada.</p>
             </div>
-          </article>
+          </div>
         </div>
-      </div>
-
-      <!-- Evidence note -->
-      <div class="evidence-note">
-        <strong>Evidencia:</strong> Página como evidencia de Historia — línea del tiempo interactiva.
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <small>© 2025 • Trabajos Secundaria — Carlos Emmanuel Alba Escobedo</small>
-  </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
+
+
 
 
 
