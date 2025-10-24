@@ -1,109 +1,117 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trabajos Secundaria - Carlos Emmanuel Alba Escobedo</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trabajos de Carlos Emmanuel Alba Escobedo</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <canvas id="particles"></canvas>
+  <header>
+    <h1>Trabajos de Carlos Emmanuel Alba Escobedo</h1>
+    <nav>
+      <ul>
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#tecnologia">Tecnología</a></li>
+        <li><a href="#quimica">Química</a></li>
+        <li><a href="#matematicas">Matemáticas</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Botón de menú -->
-  <div class="menu-btn" id="menuBtn">&#9776;</div>
-
-  <!-- Panel lateral -->
-  <nav class="side-menu" id="sideMenu">
-    <h2>Materias</h2>
-    <ul>
-      <li data-target="tecno" class="active">Tecnologías</li>
-      <li data-target="quimica">Química</li>
-      <li data-target="mates">Matemáticas</li>
-      <li data-target="historia">Historia</li>
-    </ul>
-  </nav>
-
-  <!-- Contenido principal -->
   <main>
-    <!-- Fondo animado -->
-    <div class="bg-waves"></div>
+    <!-- HISTORIA -->
+    <section id="historia" class="materia">
+      <h2>Historia</h2>
+      <p class="desc">Explora las principales etapas de la humanidad y las civilizaciones que marcaron su desarrollo.</p>
 
-    <section id="tecno" class="content active">
-      <h1>Tecnologías</h1>
-      <p>Exploramos herramientas digitales y habilidades prácticas que nos ayudan a resolver problemas de la vida real mediante la innovación y la creatividad.</p>
-    </section>
-
-    <section id="quimica" class="content">
-      <h1>Química</h1>
-      <p>Estudiamos la composición y transformación de la materia, comprendiendo cómo los elementos se combinan para formar todo lo que nos rodea.</p>
-    </section>
-
-    <section id="mates" class="content">
-      <h1>Matemáticas</h1>
-      <p>Aprendemos a analizar patrones, resolver problemas lógicos y aplicar el razonamiento numérico en diferentes contextos del mundo real.</p>
-    </section>
-
-    <section id="historia" class="content">
-      <h1>Historia</h1>
-      <p>Línea del tiempo desde la prehistoria hasta las civilizaciones fluviales.</p>
-
+      <h3>Línea del Tiempo</h3>
       <div class="timeline-container">
-        <div class="timeline-items">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <p>2,500,000 a.C – 3000 a.C</p>
-              <strong>Edad de Piedra</strong>
-              <p>Uso de herramientas de piedra y control del fuego.</p>
+        <div class="timeline">
+          <div class="event">
+            <div class="content">
+              <h4>Edad de Piedra</h4>
+              <p>2.5 millones a.C.<br>Uso de herramientas de piedra.</p>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <p>3500 a.C – 1200 a.C</p>
-              <strong>Edad de los Metales</strong>
-              <p>Metalurgia: cobre, bronce e hierro para utensilios y armas.</p>
+          <div class="event">
+            <div class="content">
+              <h4>Edad de los Metales</h4>
+              <p>3,000 a.C.<br>Uso del cobre, bronce y hierro.</p>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <p>3500 a.C</p>
-              <strong>Mesopotamia</strong>
-              <p>Invención de la escritura cuneiforme.</p>
+          <div class="event">
+            <div class="content">
+              <h4>Mesopotamia</h4>
+              <p>3,500 a.C.<br>Primera escritura cuneiforme.</p>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <p>3100 a.C</p>
-              <strong>Egipto</strong>
-              <p>Arquitectura monumental y planificación hidráulica.</p>
+          <div class="event">
+            <div class="content">
+              <h4>Egipto</h4>
+              <p>3,100 a.C.<br>Pirámides y escritura jeroglífica.</p>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <p>2500 a.C</p>
-              <strong>Valle del Indo</strong>
-              <p>Urbanismo organizado y sistemas de drenaje.</p>
+          <div class="event">
+            <div class="content">
+              <h4>India</h4>
+              <p>2,600 a.C.<br>Planificación urbana en Harappa.</p>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <p>2200 a.C</p>
-              <strong>China (Huang He)</strong>
-              <p>Desarrollo agrícola y administración centralizada.</p>
+          <div class="event">
+            <div class="content">
+              <h4>China</h4>
+              <p>1,600 a.C.<br>Bronce y escritura pictográfica.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- TECNOLOGÍA -->
+    <section id="tecnologia" class="materia">
+      <h2>Tecnología</h2>
+      <p class="desc">La innovación como motor del futuro: aprende sobre programación, robótica y más.</p>
+      <div class="cards">
+        <div class="card">Programación</div>
+        <div class="card">Robótica</div>
+        <div class="card">Diseño Digital</div>
+      </div>
+    </section>
+
+    <!-- QUÍMICA -->
+    <section id="quimica" class="materia">
+      <h2>Química</h2>
+      <p class="desc">Estudia la composición de la materia y los cambios que ocurren a su alrededor.</p>
+      <div class="cards">
+        <div class="card">Elementos</div>
+        <div class="card">Reacciones</div>
+        <div class="card">Laboratorio</div>
+      </div>
+    </section>
+
+    <!-- MATEMÁTICAS -->
+    <section id="matematicas" class="materia">
+      <h2>Matemáticas</h2>
+      <p class="desc">Descubre el lenguaje universal de la ciencia y la lógica.</p>
+      <div class="cards">
+        <div class="card">Álgebra</div>
+        <div class="card">Geometría</div>
+        <div class="card">Cálculo</div>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <p>© 2025 Carlos Emmanuel Alba Escobedo</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+
+
 
 
 
