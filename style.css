@@ -169,3 +169,24 @@ footer {
     width: 140px;
   }
 }
+.galeria-matematicas {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.galeria-matematicas img {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.galeria-matematicas img:hover {
+  transform: scale(1.08);
+}
+
