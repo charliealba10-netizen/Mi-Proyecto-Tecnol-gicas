@@ -189,4 +189,16 @@ footer {
 .galeria-matematicas img:hover {
   transform: scale(1.08);
 }
+.img-historia {
+  display: block;
+  margin: 20px auto;
+  width: 300px;
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+  transition: transform 0.3s ease;
+}
 
+.img-historia:hover {
+  transform: scale(1.05);
+}
